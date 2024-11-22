@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Par-Form</title>
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <base href="/" />
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand p-2">Par Guy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+            <!--
+            <div class="collapse navbar-collapse" id="navbarNav">  
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link text-bold" href="index.html">PAR Form </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addenda.html">Addenda</a>
+                    </li>
+
+                    random commented message to add 
+                </ul>
+            </div>
+        -->
+            <!--
+            <div class="me-3" id="selectBox" >
+                <select class="form-select" name="stateSelect" aria-label="Default select example" onchange="SelectBoxInfo()">
+                    <option selected>State Select</option>
+                    <option value="1">Alabama</option>
+                    <option value="2">Alaska</option>
+                    <option value="51">Arizona</option>
+                    <option value="3">Arkansas</option>
+                    <option value="4">California</option>
+                    <option value="5">Colorado</option>
+                    <option value="6">Connecticut</option>
+                    <option value="7">Delaware</option>
+                    <option value="8">Florida</option>
+                    <option value="9">Georgia</option>
+                    <option value="10">Hawaii</option>
+                    <option value="11">Idaho</option>
+                    <option value="12">Illinois</option>
+                    <option value="13">Indiana</option>
+                    <option value="14">Iowa</option>
+                    <option value="15">Kansas</option>
+                    <option value="16">Kentucky</option>
+                    <option value="17">Louisiana</option>
+                    <option value="18">Maine</option>
+                    <option value="19">Maryland</option>
+                    <option value="20">Massachusetts</option>
+                    <option value="21">Michigan</option>
+                    <option value="22">Minnesota</option>
+                    <option value="23">Mississippi</option>
+                    <option value="24">Missouri</option>
+                    <option value="25">Montana</option>
+                    <option value="26">Nebraska</option>
+                    <option value="27">Nevada</option>
+                    <option value="28">New Hampshire</option>
+                    <option value="29">New Jersey</option>
+                    <option value="30">New Mexico</option>
+                    <option value="31">New York</option>
+                    <option value="32">North Carolina</option>
+                    <option value="33">North Dakota </option>
+                    <option value="34">Ohio</option>
+                    <option value="35">Oklahoma</option>
+                    <option value="36">Oregon</option>
+                    <option value="37">Pennsylvania</option>
+                    <option value="38">Rhode Island</option>
+                    <option value="39">South Carolina</option>
+                    <option value="40">South Dakota</option>
+                    <option value="41">Tennessee</option>
+                    <option value="42">Texas</option>
+                    <option value="43">Utah</option>
+                    <option value="44">Vermont</option>
+                    <option value="45">Virginia</option>
+                    <option value="46">Washington</option>
+                    <option value="47">Washington DC</option>
+                    <option value="48">West Virginia</option>
+                    <option value="49">Wisconsin</option>
+                    <option value="50">Wyoming </option>
+                  </select>
+            </div>
+        -->
+            <div class="btn-group me-3" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnretail" onclick="enableButton()" autocomplete="off" checked>
+                <label class="btn btn-outline-danger" for="btnretail">Retail</label>
+              
+                <input type="radio" class="btn-check" name="btnradio" id="btntpo" onclick="disableButton()" autocomplete="off">
+                <label class="btn btn-outline-danger" for="btntpo">TPO</label>
+              </div>
+              <!--
+              <div class="mx-3">
+                <button class="btn btn-outline-danger"><i id="gearButton"class="bi bi-gear-fill"></i></button>
+              </div>
+            -->
+        </nav> 
+    
+        <div class="container">    
+            <div class="row">
+                <!-- Property Hub Column-->
+                <div id="propertyHub" class="col-md-4">
+                    <h3>Property Hub</h3>
+                    <form id="property-hub-form" name="Property Hub" class="row g-2 align-items-center">
+                        <!-- Seller Mismatch -->
+                        <div class="col-md-4">
+                            <label for="sellerNameMismatch" class="col-form-label">Seller Mismatch:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="sellerNameMismatch" class="form-control">
+                        </div>
+                        <!-- Property Type -->
+                        <div class="col-md-4">
+                            <label for="propertyType" class="col-form-label">Property Type:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="propertyType" class="form-control">
+                        </div>
+                        <!-- Last Date of Sale -->
+                        <div class="col-md-4">
+                            <label for="lastDateOfSale" class="col-form-label">Last Date of Sale:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="lastDateOfSale" class="form-control">
+                        </div>
+                        <!-- Additonal Notes -->
+                        <div class="col-md-10">
+                            <label for="phAdditinalNotes" class="form-label">Additional Notes:</label>
+                            <textarea class="form-control" id="phAdditinalNotes" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-10">
+                            <button type="button" id="phButton" onclick="copy('property-hub-form')" class="btn btn-primary">Copy</button>
+                        </div>
+                    </form>
+                    <!-- FSBO Info -->
+                    <div>
+                        <div class="form-check form-switch t-3">
+                            <div>
+                                Is the Loan FSBO?
+                            </div>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="isLoanFsboYes" value="option1" onclick="fsboIsYes()" >
+                            <label class="form-check-label" for="isLoanFsboYes">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="isLoanFsboNo" value="option2" checked  onclick="fsboIsNo()">
+                            <label class="form-check-label" for="isLoanFsboNo">
+                              No
+                            </label>
+                          </div>
+                          <div>
+                            Listing Agent Info completed?
+                          </div id="listingAgentInfo" >
+                          <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="listingAgentYes" value="option3">
+                            <label class="form-check-label" for="ListingAgentYes">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="listingAgentNo" value="option4" checked>
+                            <label class="form-check-label" for="ListingAgentNo">
+                              No
+                            </label>
+                          </div>
+                          <div>
+                            Selling Agent Info completed?
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="SellingAgentYes" value="option5" >
+                            <label class="form-check-label" for="SellingAgentYes">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="radio" name="exampleRadios2" id="SellingAgentNo" value="option6" checked>
+                            <label class="form-check-label" for="SellingAgentNo">
+                              No
+                            </label>
+                          </div>
+                    </div>
+                    <div class="md-4">
+                        <h5 class="text-danger"> <strong>** If OTP is Split, set PTC Action **</strong></h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- Basic Info Column-->
+                    <h3>Basic Info</h3>
+                    <form id="basic-info-form" name="Basic-Info" class="row g-2 align-items-center">
+                        <div class="col-md-10">
+                            <label for="infoDocumentUsed" class="col-form-label">Document Used:</label>
+                            <textarea id="infoDocumentUsed" onfocusout="documentReplica()" class="form-control " rows="3"  ></textarea>
+                        </div>
+                        <div class="col-md-4" >
+                            <label for="infoLoanType"  class="col-form-label">Loan Type:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input  type="text"  id="infoLoanType" class="form-control" name="purchasePrice">   
+                        </div>
+                        <!-- Purchase Price -->
+                        <div class="col-md-4" >
+                            <label for="infoPurchasePrice"  class="col-form-label">Purchase Price:<strong class="text-danger">*</strong></label>
+                        </div>
+                        <div class="col-md-6">
+                            <input  type="text" onfocusout="myFunctionPurchasePrice()" id="infoPurchasePrice" class="form-control" name="purchasePrice" required>   
+                        </div>
+
+                        <!-- EMD -->
+                        <div class="col-md-4">
+                            <label for="infoEmd" class="col-form-label">EMD:<strong class="text-danger">*</strong></label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="infoEmd" class="form-control" required>
+                        </div>
+                        <!-- Seller Consessions-->
+                        <div class="col-md-4">
+                            <label for="infoConcessions" class="col-form-label">Seller Concessions:<strong class="text-danger">*</strong></label>
+                        </div>
+                        <div class=" col-md-6 ">
+                            <input type="text" id="infoConcessions" class="form-control" required>
+                        </div>
+                        <!-- Transfer Taxes -->
+                        <div class="col-md-4">
+                            <label for="infoTransferTaxes" class="col-form-label">Transfer Taxes:<strong class="text-danger">*</strong></label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="infoTransferTaxes" onfocusout="transferTaxSwap()" class="form-control" required>
+                        </div>
+                        <!-- Contract Closing Date -->
+                        <div class="col-md-4">
+                            <label for="infoCcd" class="col-form-label">CCD:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="infoCcd" class="form-control">
+                        </div>
+                        <!-- Financing Contingency Date -->
+                        <div class="col-md-4">
+                            <label for="infoFcd" class="col-form-label">FCD:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="infoFcd" class="form-control">
+                        </div>
+                        <!-- Signing Date -->
+                        <div class="col-md-10">
+                            Signing Date:
+                        </div>
+                        <div class="col-md-4">
+                            <label for="infoBuyerSign" class="col-form-label">Buyer:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="infoBuyerSign" class="form-control">
+                        </div>
+                        <!-- Seller Signing Date -->
+                        <div class="col-md-4">
+                            <label for="infoSellerSign" class="col-form-label">Seller:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="infoSellerSign" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="infoAcd" class="col-form-label">Appraisal Cont Date:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="infoAcd" class="form-control">
+                        </div> 
+                        <div class="col-md-4">
+                            <label for="occuDate" class="col-form-label">Occupancy Date:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="occuDate" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="buyDownAmt" class="col-form-label">Buydown Amount:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="buyDownAmt" class="form-control">
+                        </div>
+                        <div class="col-md-10">
+                            <label for="biAdditinalNotes" class="form-label">Additional Notes:</label>
+                            <textarea class="form-control" id="biAdditinalNotes" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-10">
+                            <button type="button"  id="basicInfoButton" data-bs-toggle="button" onclick="copy('basic-info-form')" class="btn btn-primary "  disabled >Copy</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <!-- Transfer Taxes Column-->
+                    <h3>Transfer Taxes</h3>
+                    <form id="transfer-taxes-form" name="Transfer Taxes" class="row g-2 align-items-center">
+                        <div class="col-md-10">
+                            <label for="ttDocumentUsed" class="col-form-label">Document Used:</label>
+                            <textarea id="ttDocumentUsed" class="form-control" disabled rows="3"></textarea>
+                        </div>
+                        <!-- Transfer Taxes -->
+                        <div class="col-md-4">
+                            <label for="ttWhoPaying" class="col-form-label">Transfer Taxes:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="ttWhoPaying" class="form-control" disabled>
+                        </div>
+                        <!-- Buyer Paid -->
+                        <div class="col-md-10">
+                            <label for="ttBuyerPaid" class="col-form-label">Buyer Paid:</label>
+                            <textarea id="ttBuyerPaid" class="form-control" rows="3"></textarea>
+                        </div>
+                        <!-- Seller Paid -->
+                        <div class="col-md-10">
+                            <label for="ttSellerPaid" class="col-form-label">Seller Paid:</label>
+                            <textarea id="ttSellerPaid" class="form-control" rows="3"></textarea>
+                        </div>
+                        <!-- Purchase Price -->
+                        <div class="col-md-4">
+                            <label for="ttPp" class="col-form-label">Purchase Price:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="ttPp" class="form-control" disabled>
+                        </div>
+                        <!-- Additional Notes -->
+                        <div class="col-md-10">
+                            <label for="ttAdditinalNotes" class="form-label">Additional Notes:</label>
+                            <textarea class="form-control" id="ttAdditinalNotes" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-10">
+                            <button type="button" onclick="copy('transfer-taxes-form')" class="btn btn-primary">Copy</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h3>Copy/Delete All</h3>
+                </div>
+                <div class="col-md-9 ">
+                    <button id="copyAllBtn" type="button" onclick="copyAll('transfer-taxes-form')" class="btn btn-success" disabled>Copy Property Hub and Basic Info</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="delete" id="dltBtn" onclick="deleteBasicInfo(), deleteTt(), deletePropHub()" class="btn btn-danger">Delete All</button>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    
+    </body>
+
+</html>
